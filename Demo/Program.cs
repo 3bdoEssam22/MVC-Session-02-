@@ -14,10 +14,12 @@ namespace Demo
 
             //app.MapGet("/", () => "Hello World!");
 
+            app.UseStaticFiles();
             app.MapControllerRoute(
                     name: "Default",
-                    pattern: "{controller=Movies}/{action=Index}"
+                    pattern: "{controller=Home}/{action=Index}"
                     );
+
             //defaults: new { action = "Index", controller = "Movies" },
             //constraints: new { Id = @"\d{2}"});
 
